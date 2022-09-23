@@ -5,13 +5,14 @@
 ### Useful links
 
 - Main page: https://rust-lang.org
+- Online playground: https://play.rust-lang.org/
 - rustup (toolchain manager): https://rustup.rs/
   - `stable` is "stable" version of the compiler, `beta` are future candidates
   - I tend to use `nightly` version of compiler, because it supports unstable features
     - can be set with `rustup default nightly-DATE`
     - check https://rust-lang.github.io/rustup-components-history/ to find latest DATE
       that supports rust-analyzer
-- install rust-analyzer, it helps a lot: https://rust-analyzer.github.io/
+- Install rust-analyzer, it helps a lot: https://rust-analyzer.github.io/
 - `std` documentation: https://doc.rust-lang.org/std/index.html (`!ruststd` in Brave/DDG)
 - Crate registry (very similar to Hackage): https://crates.io/ (`!crates`)
   - Alternatively, with crates sorted by categories: https://lib.rs (`!librs`)
