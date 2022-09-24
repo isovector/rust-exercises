@@ -58,5 +58,6 @@
 - [ ] closures (`Fn_` traits)
 - [ ] type synonyms, `impl` types
 - [ ] `dyn` types
+- [ ] `unsafe`
 - [ ] macros (at least declarative ones)
 - [ ] async (futures representation, `Future` trait, `.await` syntax, `async-std`)
