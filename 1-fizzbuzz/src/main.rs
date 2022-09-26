@@ -3,13 +3,14 @@ fn fizzbuzz(sz: usize) -> String {
     let div_5 = sz % 5 == 0;
 
     if div_3 && div_5 {
-        return String::from("fizzbuzz");
+        String::from("fizzbuzz");
     } else if div_3 {
-        return String::from("fizz");
+        String::from("fizz");
     } else if div_5 {
-        return String::from("buzz");
+        String::from("buzz");
+    } else {
+        format!("{}", sz)
     }
-    return format!("{}", sz)
 }
 
 fn main() {
