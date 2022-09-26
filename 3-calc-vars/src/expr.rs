@@ -16,17 +16,23 @@ pub enum BinOp {
     Div,
 }
 
+impl BinOp {
+    pub fn to_fn(self) -> fn(f64, f64) -> f64 {
+        match self {
+            Add => |lhs, rhs| lhs + rhs,
+            Sub => |lhs, rhs| lhs - rhs,
+            Mul => |lhs, rhs| lhs * rhs,
+            Div => |lhs, rhs| lhs / rhs
+        }
+    }
+}
+
 impl Expr {
     pub fn eval(self, vars: &HashMap<String, f64>) -> f64 {
         match self {
             Lit(n) => n,
             Var(v) => vars[&v],
-            Bin(op, l, r) => match op {
-                Add => l.eval(vars) + r.eval(vars),
-                Sub => l.eval(vars) - r.eval(vars),
-                Mul => l.eval(vars) * r.eval(vars),
-                Div => l.eval(vars) / r.eval(vars),
-            }
+            Bin(op, l, r) => op.to_fn()(l.eval(vars), r.eval(vars)),
         }
     }
 }

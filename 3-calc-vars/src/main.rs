@@ -14,11 +14,11 @@ fn main() {
                 Bin(Mul,
                     Box::new(
                         Bin(Add,
-                            Box::new(Var(String::from("hello"))),
+                            Box::new(Var(String::from("x"))),
                             Box::new(Lit(2.)))),
-                    Box::new(Lit(3.)))),
+                    Box::new(Var(String::from("y"))))),
             Box::new(Lit(4.)));
-    let vals = HashMap::from([(String::from("hello"), 1_f64)]);
+    let vals = HashMap::from([(String::from("x"), 1_f64), (String::from("y"), 3_f64)]);
     let res = ast.eval(&vals);
     print!("{res}")
 }
