@@ -17,7 +17,7 @@ pub enum BinOp {
 }
 
 impl BinOp {
-    pub fn to_fn(self) -> fn(f64, f64) -> f64 {
+    fn to_fn(self) -> fn(f64, f64) -> f64 {
         match self {
             Add => |lhs, rhs| lhs + rhs,
             Sub => |lhs, rhs| lhs - rhs,
